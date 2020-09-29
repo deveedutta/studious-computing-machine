@@ -15,25 +15,22 @@ main {
     padding-bottom: 20px;
     margin-bottom: 10px;
     border-bottom: 3px solid #eee;
+    display: flex;
+    justify-content: space-evenly;
   }
     .List li * {
       margin: 0;
       padding: 5px;
-
+      color: #777;
+      font-size: 12px;
     }
-    .List li h4 {
-      font-size: 30px;
+    .List li strong,
+    .List li span {
+      line-height: 35px;
+      flex: 1 0 20px;
+    }
+    .List li strong {
       color: #333;
-    }
-    .List li p {
-      font-size: 14px;
-      color: #111;
-    }
-
-    .List li small {
-      font-size: 14px;
-      font-weight: 900;
-      color: #aaa;
     }
 
 .pagination {

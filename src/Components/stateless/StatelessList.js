@@ -4,9 +4,9 @@ const StatelessList = (props) => (
   <li key={props.postId}>
     <input type="checkbox" />
 
-    <h3>{props.id}. {props.name}</h3>
-    <span>{props.type}</span>
-    <span>{props.lastSaved}</span>
+    <strong>{props.id}. {props.name.substr(0, 30)}..</strong>
+    <span>{props.type.substr(0, 30)}....</span>
+    <span>{props.lastSaved.substr(0, 30)}....</span>
     <span>
       <button onClick={props.edit}>🖊</button>
       <button  onClick={props.delete}>❌</button>

@@ -47,8 +47,8 @@ class Home extends React.Component {
           <h1>Campaign listing page</h1>
             <ul className="List">
               <li>
-                <input type="checkbox" />
-                <h3>Campaign Name</h3>
+                <strong>selected</strong>
+                <strong>Campaign Name</strong>
                 <span>Campaign Type</span>
                 <span>Last Saved </span>
                 <span>Action</span>
