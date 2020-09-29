@@ -1,0 +1,42 @@
+main {
+  min-height: 400px;
+}
+
+
+
+.List {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+  .List li {
+    text-align: left;
+    list-style: none;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #eee;
+  }
+    .List li * {
+      margin: 0;
+      padding: 5px;
+
+    }
+    .List li h4 {
+      font-size: 30px;
+      color: #333;
+    }
+    .List li p {
+      font-size: 14px;
+      color: #111;
+    }
+
+    .List li small {
+      font-size: 14px;
+      font-weight: 900;
+      color: #aaa;
+    }
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+}
