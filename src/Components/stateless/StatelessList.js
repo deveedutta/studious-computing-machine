@@ -1,15 +1,16 @@
 import React from 'react';
 
 const StatelessList = (props) => (
-  <li key={this.props.id}>
+  <li key={props.postId}>
     <input type="checkbox" />
-    <h3>{this.props.campaignName}</h3>
-    <span>{this.props.campaignType}</span>
-    <span>{this.props.lastSaved}</span>
+
+    <h3>{props.id}. {props.name}</h3>
+    <span>{props.type}</span>
+    <span>{props.lastSaved}</span>
     <span>
-      <button onClick={this.props.edit}>🖊</button>
-      <button  onClick={this.props.delete}>❌</button>
-      {this.props.campaignLastSaved}
+      <button onClick={props.edit}>🖊</button>
+      <button  onClick={props.delete}>❌</button>
+      {props.campaignLastSaved}
     </span>
   </li>
 );

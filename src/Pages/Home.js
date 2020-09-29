@@ -28,13 +28,15 @@ class Home extends React.Component {
 
   render() {
 
-    const lists = this.props.campaigns.map( campaign => {
+    const lists = this.props.campaigns.map( (campaign, index) => {
+      console.log(campaign);
+      // return <span>{index}</span>;
       return <StatelessList
         postId={campaign.postId}
         id={campaign.id}
-        type={campaign.name}
+        name={campaign.name}
+        type={campaign.body}
         lastSaved={campaign.email}
-        desc={campaign.body}
         edit={this.editCampaign}
         delete={this.props.deleteCampaign}/>;
     })

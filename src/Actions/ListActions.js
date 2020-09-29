@@ -17,7 +17,8 @@ const loadCampaigns = () => {
 
     Axios.get(`https://someurl.com/all`)
     .then((response) => {
-      dispatch(campaignFetchSuccess(response));
+      // response was too big for the page to render
+      dispatch(campaignFetchSuccess( response.slice(0, 20) ));
     })
     .catch((err) => {
       dispatch(campaignFetchFailed(err));
@@ -30,7 +31,7 @@ const loadCampaignsByPage = (param) => {
     dispatch({type: FETCH_CAMPAIGNS_BY_PAGE });
     Axios.get(`https://someurl.com/${param}`)
     .then((response) => {
-      dispatch(campaignFetchSuccess(response));
+      dispatch(campaignFetchSuccess( response.slice(0, 20) ));
     })
   }
 }
@@ -58,7 +59,7 @@ const deleteCampaign = (param) => {
 
     Axios.get(`https://someurl.com/delete/campaign/${param}`)
     .then((response) => {
-      dispatch(deleteCampaignSuccess(response));
+      dispatch(deleteCampaignSuccess( response.slice(0, 20)  ));
     })
     .catch((err) => {
       dispatch(deleteCampaignFailed(err));
